@@ -1,21 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <h1>Welcome to Bus Tracker</h1>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Use this app to see live location of Tampere public transit vehicles
+          (bus and tram)
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://nysse.fi"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          See official website of Tampere public transit
         </a>
       </header>
     </div>
