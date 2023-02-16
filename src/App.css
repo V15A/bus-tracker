@@ -7,6 +7,14 @@
   pointer-events: none;
 }
 
+
+.leaflet-container {
+  margin: auto;
+  width: 100vw;
+  height: 85vh;
+  z-index: 1;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
