@@ -9,15 +9,8 @@ function App() {
           Use this app to see live location of Tampere public transit vehicles
           (bus and tram)
         </p>
-        <a
-          className="App-link"
-          href="https://nysse.fi"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          See official website of Tampere public transit
-        </a>
       </header>
+      {<OpenStreetComponent />}
     </div>
   );
 }
