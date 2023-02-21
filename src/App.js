@@ -1,4 +1,5 @@
 import "./App.css";
+import OpenStreetComponent from "./components/LeafletComponent";
 
 function App() {
   return (
