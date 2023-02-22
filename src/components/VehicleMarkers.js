@@ -1,4 +1,4 @@
-import { Marker, Popup } from "react-leaflet";
+import { Marker, Popup, CircleMarker, Tooltip } from "react-leaflet";
 import { useState, useEffect } from "react";
 import FetchData from "../FetchData";
 
@@ -20,8 +20,29 @@ export const VehicleMarkers = () => {
     }, 1500);
   }, [update]);
 
+  const vehicleColorHelper = (route_id) => {
+    if (route_id === "1" || route_id === "3") {
+      return "red";
+    } else {
+      return "blue";
+    }
+  };
+
   return markers.map((marker) => (
-    <Marker
+    <CircleMarker
+      key={marker.id}
+      radius={10}
+      color={vehicleColorHelper(marker.vehicle.trip.route_id)}
+      fillColor={vehicleColorHelper(marker.vehicle.trip.route_id)}
+      fillOpacity={0.5}
+      center={[
+        marker.vehicle.position.latitude,
+        marker.vehicle.position.longitude,
+      ]}
+    >
+      <Tooltip>{marker.vehicle.trip.route_id}</Tooltip>
+    </CircleMarker>
+    /*<Marker
       key={marker.id}
       position={[
         marker.vehicle.position.latitude,
@@ -29,6 +50,6 @@ export const VehicleMarkers = () => {
       ]}
     >
       <Popup>{marker.vehicle.trip.route_id}</Popup>
-    </Marker>
+    </Marker>*/
   ));
 };
