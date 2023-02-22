@@ -33,8 +33,8 @@ export const VehicleMarkers = () => {
       key={marker.id}
       radius={10}
       color={vehicleColorHelper(marker.vehicle.trip.route_id)}
-      fillColor={vehicleColorHelper(marker.vehicle.trip.route_id)}
-      fillOpacity={0.5}
+      fillColor="White"
+      fillOpacity={1}
       center={[
         marker.vehicle.position.latitude,
         marker.vehicle.position.longitude,
