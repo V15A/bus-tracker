@@ -21,7 +21,7 @@ export const VehicleMarkers = () => {
   }, [update]);
 
   const vehicleColorHelper = (route_id) => {
-    if (route_id === "1" || route_id === "3") {
+    if (Number(route_id) === 1 || Number(route_id) === 3) {
       return "red";
     } else {
       return "blue";
