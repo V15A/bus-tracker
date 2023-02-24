@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/V15A/bus-tracker/static/css/main.2268d811.css",
+    "main.js": "/V15A/bus-tracker/static/js/main.95f7af64.js",
+    "static/js/787.136bdeb1.chunk.js": "/V15A/bus-tracker/static/js/787.136bdeb1.chunk.js",
+    "static/media/bus-stop.png": "/V15A/bus-tracker/static/media/bus-stop.69243cbd242e12245cda.png",
+    "index.html": "/V15A/bus-tracker/index.html",
+    "main.2268d811.css.map": "/V15A/bus-tracker/static/css/main.2268d811.css.map",
+    "main.95f7af64.js.map": "/V15A/bus-tracker/static/js/main.95f7af64.js.map",
+    "787.136bdeb1.chunk.js.map": "/V15A/bus-tracker/static/js/787.136bdeb1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2268d811.css",
+    "static/js/main.95f7af64.js"
+  ]
+}
