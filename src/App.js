@@ -1,5 +1,5 @@
 import "./App.css";
-import OpenStreetComponent from "./components/LeafletComponent";
+import LeafletMap from "./components/LeafletMap";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
           (bus and tram)
         </p>
       </header>
-      {<OpenStreetComponent />}
+      {<LeafletMap />}
     </div>
   );
 }
