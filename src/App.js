@@ -11,7 +11,7 @@ function App() {
           (bus and tram)
         </p>
       </header>
-      {<LeafletMap />}
+      <LeafletMap />
     </div>
   );
 }

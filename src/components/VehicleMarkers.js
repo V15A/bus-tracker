@@ -8,7 +8,9 @@ export const VehicleMarkers = () => {
   useEffect(() => {
     const some = async () => {
       try {
-        const dat = await FetchData(process.env.REACT_APP_TKL_API_URL);
+        const dat = await FetchData(
+          process.env.REACT_APP_VEHICLE_POSITIONS_URL
+        );
         setMarkers(dat.entity);
       } catch (error) {
         console.log(error);
