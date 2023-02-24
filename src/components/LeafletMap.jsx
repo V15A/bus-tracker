@@ -1,5 +1,6 @@
 import { MapContainer, TileLayer, LayersControl } from "react-leaflet";
 import { VehicleMarkers } from "./VehicleMarkers";
+import { StopPointMarkers } from "./StopPointMarkers";
 
 export default function LeafletComponent() {
   return (
@@ -33,6 +34,7 @@ export default function LeafletComponent() {
           </LayersControl.Overlay>
         </LayersControl>
         <VehicleMarkers />
+        <StopPointMarkers />
       </MapContainer>
     </div>
   );
