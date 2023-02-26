@@ -44,14 +44,5 @@ export const VehicleMarkers = () => {
     >
       <Tooltip>{marker.vehicle.trip.route_id}</Tooltip>
     </CircleMarker>
-    /*<Marker
-      key={marker.id}
-      position={[
-        marker.vehicle.position.latitude,
-        marker.vehicle.position.longitude,
-      ]}
-    >
-      <Popup>{marker.vehicle.trip.route_id}</Popup>
-    </Marker>*/
   ));
 };
