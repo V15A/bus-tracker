@@ -1,7 +1,10 @@
 import { Marker, Popup, CircleMarker, Tooltip } from "react-leaflet";
 import { useState, useEffect } from "react";
 import FetchData from "../FetchData";
-
+/**
+ *
+ * @returns Markers for each vehicle with a tooltip showing the route_id
+ */
 export const VehicleMarkers = () => {
   const [markers, setMarkers] = useState([]);
   const [update, setUpdate] = useState(false);

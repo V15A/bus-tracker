@@ -1,7 +1,10 @@
 import { MapContainer, TileLayer, LayersControl } from "react-leaflet";
 import { VehicleMarkers } from "./VehicleMarkers";
 import { StopPointMarkers } from "./StopPointMarkers";
-
+/**
+ *
+ * @returns Leaflet map component with layers and markers
+ */
 export default function LeafletComponent() {
   return (
     <div class="leaflet-container">
