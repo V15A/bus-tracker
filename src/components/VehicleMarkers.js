@@ -36,7 +36,7 @@ export const VehicleMarkers = () => {
   return markers.map((marker) => (
     <CircleMarker
       key={marker.id}
-      radius={10}
+      radius={12}
       color={vehicleColorHelper(marker.vehicle.trip.route_id)}
       fillColor="White"
       fillOpacity={1}
@@ -45,7 +45,13 @@ export const VehicleMarkers = () => {
         marker.vehicle.position.longitude,
       ]}
     >
-      <Tooltip>{marker.vehicle.trip.route_id}</Tooltip>
+      <Tooltip
+        permanent={true}
+        direction={"center"}
+        className="leaflet-vehicle-tooltip"
+      >
+        {marker.vehicle.trip.route_id}
+      </Tooltip>
     </CircleMarker>
   ));
 };

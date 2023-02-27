@@ -7,6 +7,13 @@
   pointer-events: none;
 }
 
+.leaflet-vehicle-tooltip {
+  box-shadow: none;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 10px;
+}
+
 .leaflet-container {
   margin: auto;
   width: 100vw;
