@@ -8,7 +8,7 @@ import { StopPointMarkers } from "./StopPointMarkers";
 export default function LeafletComponent() {
   return (
     <div class="leaflet-container">
-      <MapContainer center={[61.495, 23.775]} zoom={14}>
+      <MapContainer center={[61.495, 23.775]} zoom={15} minZoom={10}>
         <LayersControl position="topright">
           <LayersControl.BaseLayer name="OpenStreetMap" checked={false}>
             <TileLayer
