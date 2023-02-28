@@ -1,6 +1,6 @@
-# Bus-tracker (a work in progress)
+# Bus-tracker
 
-An app where you can see busses and trams of Tampere on map. You can also see bus/tram stops currently and a lot more in the future! This is my free-time project which may or may not get better over time.
+An app where you can see busses and trams of Tampere on map. You can also see bus/tram stops currently and a lot more in the future! This is a free-time project which may or may not get better over time.
 
 ## I want to see this in action!
 Sure thing! You can find the latest version running at 
