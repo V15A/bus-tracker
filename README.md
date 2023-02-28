@@ -2,8 +2,12 @@
 
 An app where you can see busses and trams of Tampere on map. You can also see bus/tram stops currently and a lot more in the future! This is my free-time project which may or may not get better over time.
 
+## I want to see this in action!
+Sure thing! You can find the latest version running at 
+https://v15a.github.io/bus-tracker/
+
 ## Screenshots
-- to be added later
+  - to be added later
 
 ## Tech stack
   - React
@@ -12,3 +16,9 @@ An app where you can see busses and trams of Tampere on map. You can also see bu
   
 ## Known bugs
   - vehicle numbers show on top of other vehicle markers/numbers when overlapping
+
+## Planned features
+  - improved vehicle markers with direction implication
+  - timetable of each stop when clicked
+  - button to find your current position to more quickly see traffic close to you
+  - and much more!
