@@ -37,7 +37,9 @@ export const VehicleMarkers = () => {
     <CircleMarker
       key={marker.id}
       radius={12}
-      color={vehicleColorHelper(marker.vehicle.trip.route_id)}
+      pathOptions={{
+        color: vehicleColorHelper(marker.vehicle.trip.route_id),
+      }}
       fillColor="White"
       fillOpacity={1}
       center={[
