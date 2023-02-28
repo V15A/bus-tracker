@@ -46,6 +46,7 @@ export const VehicleMarkers = () => {
         marker.vehicle.position.latitude,
         marker.vehicle.position.longitude,
       ]}
+      pane="tooltipPane"
     >
       <Tooltip
         permanent={true}
