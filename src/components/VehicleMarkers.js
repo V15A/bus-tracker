@@ -1,4 +1,4 @@
-import { Marker, Popup, CircleMarker, Tooltip } from "react-leaflet";
+import { CircleMarker, Tooltip, Pane } from "react-leaflet";
 import { useState, useEffect } from "react";
 import FetchData from "../FetchData";
 /**
@@ -33,28 +33,33 @@ export const VehicleMarkers = () => {
     }
   };
 
-  return markers.map((marker) => (
-    <CircleMarker
+  return markers.map((marker, index) => (
+    <Pane
+      name={"somePane" + marker.id}
+      style={{ zIndex: 650 + index }}
       key={marker.id}
-      radius={12}
-      pathOptions={{
-        color: vehicleColorHelper(marker.vehicle.trip.route_id),
-      }}
-      fillColor="White"
-      fillOpacity={1}
-      center={[
-        marker.vehicle.position.latitude,
-        marker.vehicle.position.longitude,
-      ]}
-      pane="tooltipPane"
     >
-      <Tooltip
-        permanent={true}
-        direction={"center"}
-        className="leaflet-vehicle-tooltip"
+      <CircleMarker
+        key={marker.id}
+        radius={12}
+        pathOptions={{
+          color: vehicleColorHelper(marker.vehicle.trip.route_id),
+        }}
+        fillColor="White"
+        fillOpacity={1}
+        center={[
+          marker.vehicle.position.latitude,
+          marker.vehicle.position.longitude,
+        ]}
       >
-        {marker.vehicle.trip.route_id}
-      </Tooltip>
-    </CircleMarker>
+        <Tooltip
+          permanent={true}
+          direction={"center"}
+          className="leaflet-vehicle-tooltip"
+        >
+          {marker.vehicle.trip.route_id}
+        </Tooltip>
+      </CircleMarker>
+    </Pane>
   ));
 };
