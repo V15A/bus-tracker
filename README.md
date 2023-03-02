@@ -5,22 +5,28 @@ An app where you can see busses and trams of Tampere on map. You can also see bu
 **Please note that this is _not_ a finished app and there a quite a few things a miss**
 
 ## I want to see this in action!
-Sure thing! You can find the latest version running at 
+
+Sure thing! You can find the latest version running at
 https://v15a.github.io/bus-tracker/
 
 ## Screenshots
-  - to be added later
+
+- to be added later
 
 ## Tech stack
-  - React
-  - Leaflet/react-leaflet
-  - itsfactory.fi API for real-time vehicle positions and stop points
-  
+
+- React
+- Leaflet/react-leaflet
+- itsfactory.fi API for real-time vehicle positions and stop points
+
 ## Known bugs
-  - vehicle numbers show on top of other vehicle markers/numbers when overlapping
+
+- ~~vehicle numbers show on top of other vehicle markers/numbers when overlapping~~
 
 ## Planned features
-  - improved vehicle markers with direction implication
-  - timetable of each stop when clicked
-  - button to find your current position to more quickly see traffic close to you
-  - and much more!
+
+- improved vehicle markers with direction implication
+- animated movement for vehicle markers
+- timetable of each stop when clicked
+- button to find your current position to more quickly see traffic close to you
+- and much more!
