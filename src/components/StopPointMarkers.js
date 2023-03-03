@@ -1,7 +1,7 @@
 import { Marker, Popup } from "react-leaflet";
 import { useState, useEffect } from "react";
 import L from "leaflet";
-import FetchData from "../FetchData";
+import FetchData from "../FetchJsonData";
 import StopIcon from "../assets/bus-stop.png";
 
 /**

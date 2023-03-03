@@ -1,6 +1,6 @@
 import { CircleMarker, Tooltip, Pane } from "react-leaflet";
 import { useState, useEffect } from "react";
-import FetchData from "../FetchData";
+import FetchData from "../FetchJsonData";
 /**
  *
  * @returns Markers for each vehicle with a tooltip showing the route_id
