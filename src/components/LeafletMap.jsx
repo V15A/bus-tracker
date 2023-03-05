@@ -13,7 +13,7 @@ export default function LeafletComponent() {
           <LayersControl.BaseLayer name="HSLmap(default)" checked={true}>
             <TileLayer
               attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-              url="https://cdn.digitransit.fi/map/v2/hsl-map/{z}/{x}/{y}.png"
+              url="https://cdn.digitransit.fi/map/v2/hsl-map-en-256/{z}/{x}/{y}.png"
             />
           </LayersControl.BaseLayer>
           <LayersControl.BaseLayer name="OpenStreetMap" checked={false}>
