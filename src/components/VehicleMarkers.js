@@ -14,7 +14,7 @@ export const VehicleMarkers = () => {
         const dat = await FetchData(
           process.env.REACT_APP_VEHICLE_POSITIONS_URL
         );
-        setMarkers(dat.entity);
+        setMarkers(dat.entity || []);
       } catch (error) {
         console.log(error);
       }
@@ -33,33 +33,37 @@ export const VehicleMarkers = () => {
     }
   };
 
-  return markers.map((marker, index) => (
-    <Pane
-      name={"somePane" + marker.id}
-      style={{ zIndex: 650 + index }}
-      key={marker.id}
-    >
-      <CircleMarker
+  if (markers.length === 0) {
+    return null;
+  } else {
+    return markers.map((marker, index) => (
+      <Pane
+        name={"somePane" + marker.id}
+        style={{ zIndex: 650 + index }}
         key={marker.id}
-        radius={12}
-        pathOptions={{
-          color: vehicleColorHelper(marker.vehicle.trip.route_id),
-        }}
-        fillColor="White"
-        fillOpacity={1}
-        center={[
-          marker.vehicle.position.latitude,
-          marker.vehicle.position.longitude,
-        ]}
       >
-        <Tooltip
-          permanent={true}
-          direction={"center"}
-          className="leaflet-vehicle-tooltip"
+        <CircleMarker
+          key={marker.id}
+          radius={12}
+          pathOptions={{
+            color: vehicleColorHelper(marker.vehicle.trip.route_id),
+          }}
+          fillColor="White"
+          fillOpacity={1}
+          center={[
+            marker.vehicle.position.latitude,
+            marker.vehicle.position.longitude,
+          ]}
         >
-          {marker.vehicle.trip.route_id}
-        </Tooltip>
-      </CircleMarker>
-    </Pane>
-  ));
+          <Tooltip
+            permanent={true}
+            direction={"center"}
+            className="leaflet-vehicle-tooltip"
+          >
+            {marker.vehicle.trip.route_id}
+          </Tooltip>
+        </CircleMarker>
+      </Pane>
+    ));
+  }
 };
