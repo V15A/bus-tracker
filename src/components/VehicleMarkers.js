@@ -37,11 +37,7 @@ export const VehicleMarkers = () => {
     return null;
   } else {
     return markers.map((marker, index) => (
-      <Pane
-        name={"somePane" + marker.id}
-        style={{ zIndex: 650 + index }}
-        key={marker.id}
-      >
+      <Pane name={marker.id} style={{ zIndex: 650 + index }} key={marker.id}>
         <CircleMarker
           key={marker.id}
           radius={12}
