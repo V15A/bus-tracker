@@ -21,6 +21,7 @@ https://v15a.github.io/bus-tracker/
 
 ## Known bugs
 
+- unintended blinking of vehicle markers on some browsers
 - ~~vehicle numbers show on top of other vehicle markers/numbers when overlapping~~
 
 ## Planned features
