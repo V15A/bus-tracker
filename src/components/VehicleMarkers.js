@@ -1,4 +1,4 @@
-import { CircleMarker, Tooltip, Pane } from "react-leaflet";
+import { CircleMarker, Tooltip, Pane, useMapEvents } from "react-leaflet";
 import { useState, useEffect } from "react";
 import FetchData from "../Util/FetchJsonData";
 /**
@@ -8,13 +8,33 @@ import FetchData from "../Util/FetchJsonData";
 export const VehicleMarkers = () => {
   const [markers, setMarkers] = useState([]);
   const [update, setUpdate] = useState(false);
+  const map = useMapEvents({
+    moveend: () => {
+      setMarkers(
+        markers.filter((marker) => {
+          const lat = marker.vehicle.position.latitude;
+          const lng = marker.vehicle.position.longitude;
+          const bounds = map.getBounds();
+          return bounds.contains([lat, lng]);
+        })
+      );
+    },
+  });
+
   useEffect(() => {
     const some = async () => {
       try {
         const dat = await FetchData(
           process.env.REACT_APP_VEHICLE_POSITIONS_URL
         );
-        setMarkers(dat.entity || []);
+        setMarkers(
+          dat.entity.filter((marker) => {
+            const lat = marker.vehicle.position.latitude;
+            const lng = marker.vehicle.position.longitude;
+            const bounds = map.getBounds();
+            return bounds.contains([lat, lng]);
+          }) || []
+        );
       } catch (error) {
         console.log(error);
       }
