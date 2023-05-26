@@ -11,7 +11,7 @@ export default function LeafletComponent() {
       <MapContainer center={[61.495, 23.775]} zoom={15} minZoom={10}>
         <TileLayer
           attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-          url="https://cdn.digitransit.fi/map/v2/hsl-map-en-256/{z}/{x}/{y}.png"
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" //"https://cdn.digitransit.fi/map/v2/hsl-map-en-256/{z}/{x}/{y}.png"
         />
 
         <VehicleMarkers />
