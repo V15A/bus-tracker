@@ -1,4 +1,4 @@
-import { MapContainer, TileLayer, LayersControl } from "react-leaflet";
+import { MapContainer, TileLayer } from "react-leaflet";
 import { VehicleMarkers } from "./VehicleMarkers";
 import { StopPointMarkers } from "./StopPointMarkers";
 /**
