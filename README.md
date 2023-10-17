@@ -4,7 +4,7 @@ An app where you can see busses and trams of Tampere on map. You can also see bu
 
 **Please note that this is _not_ a finished app and there a quite a few things a miss**
 
-## I want to see this in action!
+## I want to see this in  action!
 
 Sure thing! You can find the latest version running at
 https://v15a.github.io/bus-tracker/ <br/><br/>
