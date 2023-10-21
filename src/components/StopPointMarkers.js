@@ -2,7 +2,7 @@ import { Marker, CircleMarker, Popup, useMapEvents } from "react-leaflet";
 import { useState, useEffect } from "react";
 import L from "leaflet";
 import FetchData from "../Util/FetchJsonData";
-import StopIcon from "../assets/bus-stop.png";
+import StopIcon from "../assets/bus-stop_small.png";
 
 /**
  *
@@ -14,7 +14,6 @@ export const StopPointMarkers = () => {
   useMapEvents({
     zoom: (zoom) => {
       setZoom(zoom.target._zoom);
-      console.log(zoom.target._zoom);
     },
   });
 
