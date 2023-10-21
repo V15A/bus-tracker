@@ -21,6 +21,7 @@ I don't want to use all my time testing this on different browsers constantly as
 - React
 - Leaflet/react-leaflet
 - itsfactory.fi API for real-time vehicle positions and stop points
+- backend coming soon...
 
 ## Known bugs
 
