@@ -1,9 +1,9 @@
-import gql from "graphql-tag";
+import { gql } from "@apollo/client";
 const GET_TIMETABLE = gql`
-  subscription getTimetable($id: String!) {
-    stop(id: "tampere:4010") {
+  query getTimetable($id: String!) {
+    stop(id: $id) {
       name
-      stoptimesWithoutPatterns {
+      stoptimesWithoutPatterns(numberOfDepartures: 10) {
         scheduledDeparture
         realtimeDeparture
         departureDelay
