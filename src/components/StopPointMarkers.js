@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import L from "leaflet";
 import FetchData from "../Util/FetchJsonData";
 import StopIcon from "../assets/bus-stop_small.png";
+import TimeTable from "./TimeTable";
+import corsProxy from "../corsProxy";
 
 /**
  *
@@ -20,7 +22,9 @@ export const StopPointMarkers = () => {
   useEffect(() => {
     const getStopPoints = async () => {
       try {
-        const data = await FetchData(process.env.REACT_APP_STOP_POINTS_URL);
+        const data = await FetchData(
+          corsProxy + process.env.REACT_APP_STOP_POINTS_URL
+        );
         setMarkers(data.body);
       } catch (error) {
         console.log(error);
@@ -61,7 +65,10 @@ export const StopPointMarkers = () => {
             marker.location.split(",")[1],
           ]}
         >
-          <Popup>{marker.name}</Popup>
+          <Popup>
+            {marker.name}
+            <TimeTable stopPoint={marker} />
+          </Popup>
         </Marker>
       ));
     }
