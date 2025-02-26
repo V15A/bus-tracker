@@ -27,3 +27,19 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+.timetable-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 200px;
+}
+
+.popup-rules {
+  display: fixed;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 220px;
+}

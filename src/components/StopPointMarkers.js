@@ -65,7 +65,7 @@ export const StopPointMarkers = () => {
             marker.location.split(",")[1],
           ]}
         >
-          <Popup>
+          <Popup className="popup-rules">
             {marker.name}
             <TimeTable stopPoint={marker} />
           </Popup>

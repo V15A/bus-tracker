@@ -10,12 +10,14 @@ export default function ConvertTime(time) {
   function secondsSinceMidnight() {
     var d = new Date(),
       e = new Date(d);
-    return (e - d.setHours(0, 0, 0, 0)) / 1000;
+    return (e.getTime() - d.setHours(0, 0, 0, 0)) / 1000;
   }
-
-  if (time - secondsSinceMidnight() < 3000) {
+  if (
+    (time - secondsSinceMidnight() < 3000) &
+    (time - secondsSinceMidnight() > 0)
+  ) {
     return `${Math.round((time - secondsSinceMidnight()) / 60)} min`;
   } else {
-    return `${hours}:${minutes}`;
+    return `${hours}:${minutes.toString().padStart(2, "0")}`;
   }
 }
