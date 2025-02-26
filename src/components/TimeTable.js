@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { Modal, Button, Table, Spinner, ListGroup } from "react-bootstrap";
+import React from "react";
+import { Table, Spinner, ListGroup } from "react-bootstrap";
 import { GET_TIMETABLE } from "../queries";
-import { useSubscription, useQuery } from "@apollo/client";
+import { useQuery } from "@apollo/client";
 import ConvertTime from "../Util/ConvertTime";
 
 /** A popup component that shows timetable for the clicked bus/tram stop */
