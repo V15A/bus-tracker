@@ -1,14 +1,14 @@
 # Bus-tracker
 
-An app where you can see busses and trams of Tampere on map. You can also see bus/tram stops currently and more in the future if my time allows. This is a free-time project which may or may not get better over time.
+An app where you can see busses and trams of Tampere on map. You can also see bus/tram stops currently and more in the future if I have time. This is a free-time project which may or may not get better over time.
 
-**Please note that this is _not_ a finished app and there's quite a few things a miss**
+**Please note that this is _not_ a finished app and there's quite a few things amiss**
 
 ## I want to see this in action!
 
 Sure thing! You can find the latest version running at
 https://v15a.github.io/bus-tracker/ <br/><br/>
-Please note that using Firefox is recommended as there are some issues with other browser.<br/>
+Please note that using Firefox is recommended as there are some issues with other browsers.<br/>
 
 ## Screenshots
 
@@ -31,6 +31,5 @@ Please note that using Firefox is recommended as there are some issues with othe
 
 - improved vehicle markers with direction implication
 - animated movement for vehicle markers
-- timetable of each stop when clicked
 - button to find your current position to more quickly see traffic close to you
 - and much more!
